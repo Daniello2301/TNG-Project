@@ -1,0 +1,71 @@
+.main-edit-product{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    margin: 0;
+    .edit-content{
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.316);
+        border: 1px solid rgba(0, 0, 0, 0.316);
+        
+        .right-side{
+            height: 500px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 2rem;
+            
+            .btn-update{
+                padding: .3em 2em;
+                border-radius: 10px;
+                border: none;
+                background-color: #252525;
+                color: #fff;
+                letter-spacing: 3px;
+                left: 0;
+                transition: .3s;
+                margin-left: 1em;
+
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
+                }
+
+                &:last-child{
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .left-side{
+            width: 400px;
+            overflow: hidden;
+            background-color: #252525;
+            display: grid;
+            place-items: center;
+            object-fit: contain;
+            
+            .image-product{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                object-fit: contain;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

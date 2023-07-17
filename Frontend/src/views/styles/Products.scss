@@ -1,0 +1,57 @@
+.main-products{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 5.5rem;
+    
+    .cards-section{
+        width: 100%;
+        height: auto;
+        display: grid;
+        padding-bottom: 8rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+
+        .pagination-inputs{
+            margin: 1em 0 1em  0;
+            position: fixed;
+            bottom: 2rem;
+            background: rgba(0,0,0,0.3);
+            z-index: 0;
+            width: 100%;
+            height: 4rem;
+
+            .hidde{
+                display: none;
+            }
+        }
+    }
+
+    .btn-create-product{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 4rem;
+        right: 4rem;
+        z-index: 100;
+
+        .btn-show-create{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4rem;
+            width: 4rem;
+            font-size: 4rem;
+            color: #252525;
+            border-radius: 50%;
+            background: transparent;
+            border: none;
+            transition: .3s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}

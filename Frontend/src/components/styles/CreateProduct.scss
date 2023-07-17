@@ -1,0 +1,133 @@
+.graphpop {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.501);
+    z-index: 10000;
+    animation: showup 0.3s ease forwards;
+    opacity: 0;
+
+    .main-create-product{
+        width: 600px;
+        height: auto;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3rem;
+        
+        
+        .content-header {
+            padding: 3rem;
+            width: 100%;
+            background-color: #262626;
+            box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.25);
+            margin-top: 0;
+            animation: showup 0.3s ease forwards;
+            opacity: 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+    
+            h2, button{
+                color: #ffffff;
+            }
+
+            .btn-close-modal {
+                height: 3rem;
+                width: 3rem;
+                cursor: pointer;
+                display: block;
+                background: transparent;
+                border: 0;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+            }
+        }
+
+        .content-form{
+            display: grid;
+            margin-top: 2rem;
+            width: 80%;
+
+            .input-box-image{
+                margin: 1em 0 1em 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                label{
+                    margin-left: 6px;
+                    margin-bottom: 4px;
+                }
+                input{
+                    &::-webkit-file-upload-button {
+                        visibility: hidden;
+                    }
+
+                    &::before {
+                        content: 'Select some files';
+                        display: inline-block;
+                        background: #262626;
+                        border-radius: 3px;
+                        padding: 6px 10px;
+                        outline: none;
+                        white-space: nowrap;
+                        -webkit-user-select: none;
+                        cursor: pointer;
+                        color: #fff;
+                        letter-spacing: 1px;
+                        font-size: 10pt;                        
+                        user-select: none;
+                    }
+                }
+            }
+            .btn-create{
+                background-color: #262626;
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                float: right;
+                padding: .5rem 6rem;
+                margin-top: 2em;
+
+                &:hover{
+                    background: #333333;
+                }
+            }
+        }
+    }
+
+    .closing {
+        animation: close 0.5s ease forwards;
+    }
+}
+
+@keyframes close {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes showup {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
